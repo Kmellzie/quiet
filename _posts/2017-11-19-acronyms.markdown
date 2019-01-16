@@ -1,0 +1,108 @@
+---
+layout: post
+title:  "acronyms"
+date:   2017-11-19 22:34:00 +0500
+categories: concepts
+---
+
+## ACID
+Atomicity, Consistency, Isolation, Durability
+
+## ADL
+Architecture Description Languages
+
+## AJAX
+Asynchronous Javascript And Xml
+
+## AMI
+Amazon Machine Image
+
+## APDEX
+Application Performance Index
+
+## CHAM
+Chemical Abstract Machine formalism
+
+## CQRS
+Command Query Responsibility Segregation
+
+## CVS
+Concurrent Versions System
+
+## DDD
+Domain Driven Design
+
+## DSL
+Domain Specific Language
+
+## DSSA
+Domain-specific Software Architectures
+
+## EBNF
+Extended Backus-Naur Form
+
+## ETL
+Extract Transform and Load
+
+## HDFS
+Hadoop Distributed File System
+
+## IDLE
+Not working or active
+
+## KPI
+Key Performance Indicator
+
+## LDAP
+Lightweight Directory Access Protocol
+
+## LRU
+Least Recently Used
+
+## LSP
+Liskov Substitution Principle
+
+## MRU
+Most Recently Used
+
+## OMA
+Object Management Architecture
+
+## OOP
+Object-Oriented Programming
+
+## POJO
+Plain Old Java Object
+
+## POM
+Project Object Model
+
+## RDD
+Resilient Distributed Dataset
+
+## REPL
+Read Eval Print and Loop
+
+## REST
+Representational State Transfer
+
+## RFID
+Radio Frequency IDentification
+
+## SBT
+Scala Build Tool
+
+## SLA
+Service Level Agreement
+
+## SNMP
+Simple Network Management Protocol
+
+## SWAP
+Shared Wireless Access Protocol
+
+## YARN
+Yet Another Resource Negotiator
+
+## 4KRRS
+4K Random Read Speed

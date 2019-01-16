@@ -1,0 +1,328 @@
+---
+layout: post
+title:  "101"
+date:   2017-11-10 15:01:25 +0500
+categories: concepts
+---
+
+## Actor Model
+It is a mathematical model of concurrent computation that treats Actors as the universal primitives of concurrent computation. They may modify private state, but can only affect each other through messages, avoiding the need for any locks.
+
+## Ad Hoc
+It is a Latin phrase meaning "for this". In English, it generally signifies a solution designed for a specific problem or task, non-generalizable, and not intended to be able to be adapted to other purposes
+
+## Ad Hoc Properties
+We can provide separate function definitions for different types of A. We can provide function definitions to types without access to its source code. The function definitions can be enabled or disabled in different scopes
+
+## Asynchronous
+Not existing or occurring at the same time. The processing of a request occurs at an arbitrary point in time, sometime after it has been transmitted from client to service. 
+
+### Asynchronous methods
+
+This is not related to Concurrency and parallelism, asynchrony is used to present the impression of concurrent or parallel tasking but effectively an asynchronous method call is normally used for a process that needs to do work away from the current application and we don't want to wait and block our application awaiting the response.
+
+## ACID - Atomicity, Consistency, Isolation, Durability
+It is a set of properties that guarantee that database transactions are processed concurrently. In the context of databases, a single logical operation on the data is called a transaction.
+
+## AJAX - Asynchronous Javascript And Xml
+It is a term that describes a new approach to using a number of existing technologies together, including the following: HTML or XHTML, Cascading Style Sheets, JavaScript, the Document Object Model, XML, XSLT, and the XMLHttpRequest object.
+
+## AMI - Amazon Machine Image
+It provides the information required to launch an instance, which is a virtual server in the cloud. It includes: 
+
+|1|A template for the root volume for the instance.
+|2|Launch permissions.
+|3|A block device mapping that specifies the volumes to attach to the instance when it's launched.
+
+## APDEX - Application Performance Index
+It's an industry standard to measure users' satisfaction with the response time of an application or service. It's a simplified Service Level Agreement (SLA) solution that gives application owners better insight into how satisfied users are.
+
+## Back-Pressure
+It refers to the buildup of data at an I/O switch when buffers are full and not able to receive additional data. No additional data packets are transferred until the bottleneck of data has been eliminated or the buffer has been emptied.  To create backpressure, the I/O switch must broadcast false collision detection signals or return data packets to their originator
+
+When one component is struggling to keep-up, the system as a whole needs to respond in a sensible way. It is unacceptable for the component under stress to fail catastrophically or to drop messages in an uncontrolled fashion. 
+
+Since it can’t cope and it can’t fail it should communicate the fact that it is under stress to upstream components and so get them to reduce the load.  This back-pressure is an important feedback mechanism that allows systems to gracefully respond to load rather than collapse under it. 
+
+## Concurrent Computing
+It is a form of computing in which several computations are executed during overlapping time periods instead of sequentially (one completing before the next starts).
+
+## Concurrency 
+
+It is essentially applicable when we talk about minimum two tasks or more. When an application is capable of executing two tasks virtually at same time, we call it concurrent application. Though here tasks run looks like simultaneously, but essentially they MAY not. They take advantage of CPU time-slicing feature of operating system where each task run part of its task and then go to waiting state. When first task is in waiting state, CPU is assigned to second task to complete it’s part of task.
+
+Operating system based on priority of tasks, thus, assigns CPU and other computing resources e.g. memory; turn by turn to all tasks and give them chance to complete. To end user, it seems that all tasks are running in parallel. This is called concurrency.
+
+## Context Switch
+It is the process of storing the state of a process or of a thread, so that it can be restored and execution resumed from the same point later. This allows multiple processes to share a single CPU, and is an essential feature of a multitasking operating system.
+
+The precise meaning of the phrase “context switch” varies significantly in usage. In a multitasking context, it refers to the process of storing the system state for one task, so that task can be paused and another task resumed. A context switch can also occur as the result of an interrupt, such as when a task needs to access disk storage, freeing up CPU time for other tasks. Some operating systems also require a context switch to move between user mode and kernel mode tasks. The process of context switching can have a negative impact on system performance, although the size of this effect depends on the nature of the switch being performed.
+
+## Currying
+It is the technique of translating the evaluation of a function that takes multiple arguments (or a tuple of arguments) into evaluating a sequence of functions, each with a single argument. It was introduced by Gottlob Frege, developed by Moses Schönfinkel, and further developed by Haskell Curry.
+
+## CDH - Cloudera Distribution including Apache Hadoop
+It is a Cloudera's open-source Apache Hadoop distribution. It targets enterprise-class deployments of that technology.
+
+## CQRS - Command Query Responsibility Segregation
+This principle states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both. .Methods should return a value only if they are referentially transparent and hence possess no side effects.
+
+## CVS - Concurrent Versions System
+It is a client-server free software revision control system in the field of software development. It keeps track of all work and all changes in a set of files, and allows several developers (potentially widely separated in space and time) to collaborate.
+
+## Deadlock
+It occurs when two competing actions wait for the other to finish, and thus neither ever does.  Deadlock is a common problem in multiprocessing systems, parallel computing, and distributed systems, where software and hardware locks are used to handle shared resources and implement process synchronization.
+
+If a process is unable to change its state indefinitely because the resources requested by it are being used by another waiting process, then the system is said to be in a deadlock. 
+
+## Declarative Programming
+It is a programming paradigm that expresses the logic of a computation without describing its control flow. It often considers programs as theories of a formal logic, and computations as deductions in that logic space.
+
+## Dependency Injection
+It is a software design pattern that implements inversion of control for resolving dependencies. Passing the service to the client, rather than allowing a client to build or find the service, is its fundamental requirement.
+
+## Domain Model
+It is the representation of how the business works. When you implement a domain model, you translate the business processes into software. It is a blueprint of the relationships between the various entities of the problem domain and sketches out other important details.
+
+## DDD - Domain Driven Design
+Its premises are: Placing the project's primary focus on the core domain and domain logic; pasing complex designs on a model of the domain; and initiating a creative collaboration between technical and domain experts.
+
+## DSL - Domain Specific Language
+They are small languages, focused on a particular aspect of a software system. You can't build a whole program with them, but you often use multiple of them in a system mainly written in a general purpose language. Good examples include regular expressions and CSS.
+
+## EBNF - Extended Backus-Naur Form
+It is a family of metasyntax notations, any of which can be used to express a context-free grammar. It is used to make a formal description of a formal language which can be a computer programming language.
+
+## Elasticity
+Elasticity means that the throughput of a system scales up or down automatically to meet varying demand as resource is proportionally added or removed. 
+
+## Error
+It is an expected and coded-for condition that will be communicated to the client as part of the normal processing of its message / request. 
+
+## Failure
+It is an unexpected event within a service that prevents it from continuing to function normally. 
+
+## Fork Bomb
+It is also called rabbit virus or wabbit. It is a denial-of-service attack wherein a process continually replicates itself to deplete available system resources, slowing down or crashing the system due to resource starvation
+
+## Functional Programming
+It is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm so programming is done with expressions or declarations instead of statements.
+
+## FP - Functional Programming
+It is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm so programming is done with expressions or declarations instead of statements.
+
+## GDT - Global Descriptor Table
+It is a data structure used by Intel x86-family processors starting with the 80286 in order to define the characteristics of the various memory areas used during program execution, including the base address, the size, and access privileges like executability and writability. These memory areas are called segments in Intel terminology.
+
+## Green Threads
+They are threads that are scheduled by a runtime library or virtual machine (VM) instead of natively by the underlying operating system. Green threads emulate multithreaded environments without relying on any native OS capabilities, and they are managed in user space instead of kernel space, enabling them to work in environments that do not have native thread support.
+
+Green threads refers to the name of the original Java thread library. The Green Team is the name of the team at Sun Microsystems that designed the Java thread library
+
+On a multi-core processor, native thread implementations can automatically assign work to multiple processors, whereas green thread implementations normally cannot. Green threads can be started much faster on some VMs. 
+
+## HDFS - Hadoop Distributed File System
+It is a distributed file system that provides high-performance access to data across Hadoop clusters. When it takes in data, it breaks the information down into separate pieces and distributes them to different nodes in a cluster, allowing for parallel processing.
+
+## Idempotence
+It is the property of certain operations that can be applied multiple times without changing the result beyond the initial application.
+
+## Immutable
+It means an object whose state cannot be modified after it is created. Even if some internally used attributes change but the object's state appears to be unchanging from an external point of view.
+
+## Imperative Programming
+It is a programming paradigm that uses statements that change a program's state. It describes commands for the computer to perform and focuses on describing how a program operates.
+
+## IDLE
+Not working or active; unemployed; doing nothing. Not spent or filled with activity. Not in use or operation; not kept busy. Habitually doing nothing or avoiding work; lazy. Of no real worth, importance, or significance. Having no basis or reason.
+
+## KPI - Key Performance Indicator
+It is a type of performance measurement and evaluates the success of an organization or of a particular activity in which it engages. Often success is simply the repeated, periodic achievement of some levels of operational goal.
+
+## Lambda Calculus
+It is a formal system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution.
+
+## LDT - Local Descriptor Table
+It is a memory table used in the x86 architecture in protected mode and containing memory segment descriptors: start in linear memory, size, executability, writability, access privilege, actual presence in memory, etc.
+
+The LDT is the sibling of the Global Descriptor Table (GDT) and defines up to 8192 memory segments accessible to programs - note that unlike the GDT, the zeroeth entry is a valid entry, and can be used like any other LDT entry. Also note that unlike the GDT, the LDT cannot be used to store certain system entries: TSSs or LDTs. Call Gates and Task Gates are fine, however.
+
+## Load Pattern
+It means loaning a resource to a function. It creates the resource then loans it. The function can be passed by the caller and finally the resource is destroyed.
+
+As the name suggests it would loan a resource to your function. So if you break out the sentence. It would:
+
+|1|Create a resource which you can use.
+|2|Loan the resources to the function which would use it.
+|3|This function would be passed by the caller.
+|4|The resource would be destroyed.
+
+As you would see, the advantages are multifold. First, I am not constrained by the function which can use the loaned resource. I can pass any function that I desire. Second, I am not concerned about the creation, destruction of the resource. The loan function takes care of it.
+
+## Location Transparency
+It is the decoupling in space enabled through asynchronous message-passing, and decoupling of the runtime instances from their references. 
+
+## Locality of Reference
+Also known as the principle of locality,[1] is a term for the phenomenon in which the same values, or related storage locations, are frequently accessed, depending on the memory access pattern. There are two basic types of reference locality – temporal and spatial locality. 
+
+|Temporal Locality|It refers to the reuse of specific data, and/or resources, within a relatively small time duration. Spatial locality refers to the use of data elements within relatively close storage locations.
+|Sequential Locality|It is a special case of spatial locality, it occurs when data elements are arranged and accessed linearly, such as, traversing the elements in a one-dimensional array.
+
+### Temporal Locality
+If at one point a particular memory location is referenced, then it is likely that the same location will be referenced again in the near future. There is a temporal proximity between the adjacent references to the same memory location. In this case it is common to make efforts to store a copy of the referenced data in faster memory storage, to reduce the latency of subsequent references. Temporal locality is a special case of spatial locality (see below), namely when the prospective location is identical to the present location.
+
+### Spatial Locality
+If a particular storage location is referenced at a particular time, then it is likely that nearby memory locations will be referenced in the near future. In this case it is common to attempt to guess the size and shape of the area around the current reference for which it is worthwhile to prepare faster access for subsequent refere.
+
+## LDAP - Lightweight Directory Access Protocol
+It is a software protocol for enabling anyone to locate organizations, individuals, and other resources such as files and devices in a network, whether on the public Internet or on a corporate intranet.
+
+## LRU - Least Recently Used
+It is a cache algorithm that discards the least recently used items first. it requires keeping track of what was used and when, which is expensive, if one wants to make sure the algorithm always discards the least recently used item.
+
+## LSP - Liskov Substitution Principle
+It is a principle that states: if S is a subtype of T, then objects of type T may be replaced with objects of type S (i.e., objects of type S may substitute objects of type T) without altering any of the desirable properties of that program (correctness, task performed, etc.).
+
+## Mechanical Sympathy
+The name "Mechanical Sympathy" comes from the great racing driver Jackie Stewart, who was a 3 times world Formula 1 champion. He believed the best drivers had enough understanding of how a machine worked so they could work in harmony with it.
+
+## Memoization
+It is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.  
+
+## Message
+It is an item of data that is sent to a specific destination. 
+
+## Mutation
+It is the permanent alteration of the nucleotide sequence of a component and may or may not produce discernible changes in its observable characteristics.
+
+## MRU - Most Recently Used
+It is a cache algorithm that discards the most recently used items first. For example: "When a file is being repeatedly scanned in a [Looping Sequential] reference pattern". This algorithm is most useful in situations where the older an item is, the more likely it is to be accessed.
+
+## Non-Determinism
+It is a property of a computation which may have more than one result and may be caused by concurrent threads accessing shared mutable state.
+
+## Object-Relational Impedance Mismatch
+It is a set of conceptual and technical difficulties that are often encountered when a relational database management system is being served by an application program written in an object-oriented programming language or style
+
+## OOP - Object-Oriented Programming
+It is a programming language model organized around objects rather than "actions" and data rather than logic. Once an object has been identified, it is generalized as a class of objects which defines the kind of data it contains and any logic sequences that can manipulate it.
+
+## Parallel Computing
+It is a type of computation in which many calculations are carried out simultaneously, operating on the principle that large problems can often be divided into smaller ones, which are then solved at the same time.
+
+## Parallelism
+
+It does not require two tasks to exist. It literally physically run parts of tasks OR multiple tasks, at the same time using multi-core infrastructure of CPU, by assigning one core to each task or sub-task.
+
+Parallelism requires hardware with multiple processing units, essentially. In single core CPU, you may get concurrency but NOT parallelism.
+
+## Parametric Polymorphism
+It refers to when the type of a value contains one or more [unconstrained] type variables, so that the value may adopt any type that results from substituting those variables with concrete types.
+
+## Programming Paradigm
+It is a way to classify programming languages according to the style of computer programming. Features of various programming languages determine which they belong to.
+
+## Protocol
+A protocol defines the treatment and etiquette for the exchange or transmission of messages between components. Protocols are formulated as relations between the participants to the exchange, the accumulated state of the protocol and the allowed set of messages to be sent. 
+
+This means that a protocol describes which messages a participant may send to another participant at any given point in time. 
+
+## POJO - Plain Old Java Object
+It is a term coined to denote a normal Java object that is not a JavaBean, an EntityBean, a SessionBean, etc., and does not serve any other special role or implement any special interfaces of any of the Java frameworks (EJB, JDBC, DAO, JDO, etc...).
+
+## POM - Project Object Model
+It is an XML representation of a Maven project. It describes the project's dependencies, and all of the other little pieces that come into play to give code life. It is a one-stop-shop for all things concerning the project.
+
+## PPP - Popular Parallel Programming
+It is a research project whose goal is to help spreadsheet users harness the power of their multicore computers. The goal of this project is to achieve automatic parallelization of dataflow programs for execution on modern shared-memory multicore computers.
+
+## Referential Transparency 
+It is a property of an Expression.  An expression is said to be referentially transparent if it can be replaced with its value without changing the behavior of a program. In other words, yielding a program that has the same effects and output on the same input.
+
+With RT no distinction is made nor difference recognized between a reference to a thing and the corresponding thing itself.  
+
+## Regular Expression
+It is a sequence of characters that define a search pattern, mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations.
+
+## Replication
+Executing a component simultaneously in different places is referred to as replication. This can mean executing on different threads or thread pools, processes, network nodes, or computing centers. 
+
+Replication offers scalability, where the incoming workload is distributed across multiple instances of a component, or resilience, where the incoming workload is replicated to multiple instances which process the same requests in parallel. 
+
+## Resource
+Everything that a component relies upon to perform its function is a resource that must be provisioned according to the component’s needs. This includes CPU allocation, main memory and persistent storage as well as network bandwidth, main memory bandwidth, CPU caches, inter-socket CPU links, reliable timer and task scheduling services, other input and output devices, external services like databases or network file systems etc. 
+
+## RDD - Resilient Distributed Dataset
+It is a fault-tolerant collection of elements that can be operated on in parallel. There are two ways to create them: parallelizing an existing collection in your driver program, or referencing a dataset in an external storage system.
+
+## REPL - Read Eval Print and Loop
+Also known as an interactive top-level or language shell, is a simple, interactive computer programming environment that takes single user inputs, evaluates them, and returns the result to the user; a program written in this environment is executed piecewise.
+
+## RFID - Radio Frequency IDentification
+It is a technology similar in theory to bar code identification. With it, the electromagnetic or electrostatic coupling in the RF portion of the electromagnetic spectrum is used to transmit signals.
+
+## RP - Reactive Programming
+It is a programming paradigm oriented around data flows and the propagation of change.
+
+## RR - Random Replacement
+Randomly selects a candidate item and discards it to make space when necessary. This algorithm does not require keeping any information about the access history.
+
+## Scalability 
+The ability of a system to make use of more computing resources in order to increase its performance is measured by the ratio of throughput gain to resource increase. A perfectly scalable system is characterized by both numbers being proportional: a twofold allocation of resources will double the throughput. 
+
+## Script
+It is a program or sequence of instructions that is interpreted or carried out by another program rather than by the computer processor (as a compiled program is).
+
+## Semantic Impedance
+It is the difference or distance resulting from translating a concept found in the Real World to the domain model. The resulting domain can be source code or a UML diagram
+
+## Semantic Sympathy
+It consists of taking advantage of the particular conditions of the hardware by the software applications to obtain the best results in a quality attribute: consistency, performance, availability, etc
+
+## Short-circuit Evaluation
+It is the semantics of some Boolean operators in which the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression.
+
+## Singleton Pattern
+It is a design pattern that restricts the instantiation of a class to one object. The concept is sometimes generalized to systems that operate more efficiently when only one object exists, or that restrict the instantiation to a certain number of objects.
+
+## Starvation
+When a process is perpetually denied necessary resources to process its work. May be caused by errors in a scheduling, mutual exclusion algorithm, resource leaks or via a denial-of-service attack such as a fork bomb.
+
+## SBT - Scala Build Tool
+It is an open source build tool for Scala and Java projects, similar to Java's Maven or Ant. Useful for compiling Scala code, building descriptions, dependency management and continuous compilation, testing, and deployment.
+
+## SLA - Service Level Agreement
+It is a part of a standardized service contract where a service is formally defined. Particular aspects of the service - scope, quality, responsibilities - are agreed between the service provider and the service user.
+
+## SNMP - Simple Network Management Protocol
+It is a way that servers can share information about their current state, and also a channel through which an administer can modify pre-defined values. The protocol was created as a way of gathering information from very different systems in a consistent manner.
+
+## SWAP - Shared Wireless Access Protocol
+To replace pages or segments of data in memory. It is a useful technique that enables a computer to execute programs and manipulate data files larger than main memory. The operating system copies as much data as possible into main memory, and leaves the rest on the disk.
+
+## TSS - Task State Segment
+It is a special structure on x86-based computers which holds information about a task. It is used by the operating system kernel for task management. Specifically, the following information is stored in the TSS:
+
+|Processor register state
+|I/O port permissions
+|Inner-level stack pointers
+|Previous TSS link
+
+The TSS may reside anywhere in memory. A special segment register called the task register (TR) holds a segment selector that points to a valid TSS segment descriptor which resides in the GDT (a TSS descriptor may not reside in the LDT). Therefore, to use a TSS the following must be done by the operating system kernel:
+
+|1|Create a TSS descriptor entry in the GDT
+|2|Load the TR with the segment selector for that segment
+|3|Add information to the TSS in memory as needed
+
+For security purposes, the TSS should be placed in memory that is accessible only to the kernel.
+
+## Type Erasure
+It refers to the compile-time process by which explicit type annotations are removed from a program, before it is executed at run-time. 
+
+## Uniform Access Principle
+It was put forth by `Bertrand Meyer` (originally in Object-Oriented Software Construction). It states "All services offered by a module should be available through a uniform notation, which does not betray whether they are implemented through storage or through computation".
+
+It states that there should be no difference between working with an attribute, precomputed property, or method/query. 
+
+## YARN - Yet Another Resource Negotiator
+It is now characterized as a large-scale, distributed operating system for big data applications. It decouples MapReduce's resource management and scheduling capabilities from the data processing component.

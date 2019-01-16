@@ -1,0 +1,146 @@
+---
+layout: post
+title:  "REST - Chapter 2. Network-based Application Architectures"
+date:   2017-11-22 21:13:00 +0500
+categories: papers
+---
+
+By Roy Thomas Fielding. 2000
+
+## Chapter 2. Network-based Application Architectures
+
+## 2.1.1 Network-based vs. Distributed
+
+### Message Passing
+The primary distinction between network-based architectures and software architectures in general is that communication between components is restricted to message passing
+
+### Network-based vs. Distributed
+A distributed system is one that looks to its users like an ordinary centralized system, but runs on multiple, independent CPUs. In contrast, network-based systems are those capable of operation across a network, but not necessarily in a fashion that is transparent to the user.
+
+## 2.1.2 Application Software vs. Networking Software
+
+### Applications
+Applications represent the “business-aware” functionality of a system. Application software architecture is an abstraction level of an overall system, in which the goals of a user action are representable as functional architectural properties.
+
+## 2.2 Evaluating the Design of Application Architectures
+
+### Architectural Design
+In order to evaluate an architectural design, we need to examine the design rationale behind the constraints it places on a system, and compare the properties derived from those constraints to the target application’s objectives.
+
+### Derivation Tree
+An architectural design can therefore be analyzed by breaking-down its set of constraints into a derivation tree and evaluating the cumulative effect of the constraints represented by that tree
+
+### Trade-Offs
+Design evaluation is frequently a question of choosing between trade-offs. Perry and Wolf describe a method of recognizing trade-offs explicitly by placing a numeric weight against each property to indicate its relative importance to the architecture, thus providing a normalized metric for comparing candidate designs
+
+## 2.3.1 Performance
+
+### Interactions
+Component interactions can be the dominant factor in determining user-perceived performance and network efficiency
+
+### Performance
+The performance of a network-based application is bound first by the application requirements, then by the chosen interaction style, followed by the realized architecture, and finally by the implementation of each component.
+
+## 2.3.1.1 Network Performance
+
+### Throughput
+Throughput is the rate at which information, including both application data and communication overhead, is transferred between components.
+
+### Overhead and Amortization
+Overhead can be separated into initial setup overhead and per-interaction overhead, a distinction which is useful for identifying connectors that can share setup overhead across multiple interactions (amortization)
+
+### Bandwidth
+Bandwidth is a measure of the maximum available throughput over a given network link. Usable bandwidth refers to that portion of bandwidth which is actually available to the application.
+
+### Style impact
+Styles impact network performance by their influence on the number of interactions per user action and the granularity of data elements.
+
+## 2.3.1.2 User-perceived Performance
+
+The performance of an action is measured in terms of its impact on the user in front of an application rather than the rate at which the network moves information.  The primary measures for user-perceived performance are latency and completion time.
+
+### Latency
+Latency is the time period between initial stimulus and the first indication of a response.
+
+### Points of Latency
+Latency occurs at several points in the processing of a network-based application action: 
+
+|1|The time needed for the application to recognize the event that initiated the action
+|2|The time required to setup the interactions between components
+|3|The time required to transmit each interaction to the components
+|4|The time required to process each interaction on those components
+|5|The time required to complete sufficient transfer and processing of the result of the interactions before the application is able to begin rendering a usable result. 
+
+It is important to note that, although only (3) and (5) represent actual network communication, all five points can be impacted by the architectural style. Furthermore, multiple component interactions per user action are additive to latency unless they take place in parallel.
+
+### Completion
+Completion is the amount of time taken to complete an application action. Completion time is dependent upon all of the aforementioned measures. The difference between an action’s completion time and its latency represents the degree to which the application is incrementally processing the data being received
+
+### Side effects
+It is important to note that design considerations for optimizing latency will often have the side-effect of degrading completion time, and vice versa.
+
+### 2.3.1.3 Network Efficiency
+
+The best application performance is obtained by not using the network.  Some alternatives:
+
+|Reuse of prior interactions (caching)
+|Reduction of the frequency of network interactions in relation to user actions (replicated data and disconnected operation)
+|Removing the need for some interactions by moving the processing of data closer to the source of the data (mobile code).
+
+### 2.3.2 Scalability
+
+Scalability refers to the ability of the architecture to support large numbers of components, or interactions among components, within an active configuration.  It is impacted by:
+
+|The frequency of interactions
+|Whether the load on a component is distributed evenly over time or occurs in peaks
+|Whether an interaction requires guaranteed delivery or a best-effort
+|Whether a request involves synchronous or asynchronous handling
+|Whether the environment is controlled or anarchic (i.e., can you trust the other components?)
+
+### 2.3.3 Simplicity
+
+The primary means by which architectural styles induce simplicity is by applying the principle of separation of concerns to the allocation of functionality within components.
+
+### 2.3.4 Modifiability
+
+Modifiability is about the ease with which a change can be made to an application architecture.
+
+## Gradual and Fragmented Change
+The system must be prepared for gradual and fragmented change, where old and new implementations coexist, without preventing the new implementations from making use of their extended capabilities.
+
+### 2.3.4.1 Evolvability
+
+Evolvability represents the degree to which a component implementation can be changed without negatively impacting other components.
+
+### 2.3.4.2 Extensibility
+
+Extensibility is defined as the ability to add functionality to a system. Dynamic extensibility implies that functionality can be added to a deployed system without impacting the rest of the system.
+
+### 2.3.4.3 Customizability
+
+Customizability refers to the ability to temporarily specialize the behavior of an architectural element, such that it can then perform an unusual service. A component is customizable if it can be extended by one client of that component’s services without adversely impacting other clients of that component
+
+### 2.3.4.4 Configurability
+
+Configurability is related to both extensibility and reusability in that it refers to post-deployment modification of components, or configurations of components, such that they are capable of using a new service or data element type.
+
+### 2.3.4.5 Reusability
+
+Reusability is a property of an application architecture if its components, connectors, or data elements can be reused, without modification, in other applications.
+
+### 2.3.5 Visibility
+
+Visibility in this case refers to the ability of a component to monitor or mediate the interaction between two other components.
+
+### 2.3.6 Portability
+
+Software is portable if it can run in different environments
+
+### 2.3.7 Reliability
+
+The degree to which an architecture is susceptible to failure at the system level in the presence of partial failures within components, connectors, or data.
+
+#### Source
+[Architectural Styles and the Design of Network-based Software Architectures][rest]
+
+[rest]: http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
