@@ -9,8 +9,8 @@
 title: Quiet
 email: kmell@protonmail.com
 description: V has come to
-baseurl: "/quiet" # the subpath of your site, e.g. /blog
-url: "https://kmellzie.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://kmellzie.github.io/quiet" # the base hostname & protocol for your site
 twitter_username: km3ll
 github_username:  km3ll
 paginate: 5
